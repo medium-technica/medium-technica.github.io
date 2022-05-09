@@ -1,0 +1,125 @@
+/* Rachana */
+
+@font-face {
+	font-family: 'Rachana';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url(res/fonts/Rachana-Regular.woff2?v=Version7.0.3) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+0D01-0D7F, U+200C-U+200D, U+25CC;
+}
+
+/* Rachana Bold*/
+
+@font-face {
+	font-family: 'Rachana';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url(res/fonts/Rachana-Bold.woff2?v=Version7.0.3) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+0D01-0D7F, U+200C-U+200D, U+25CC;
+}
+
+:root {
+	--text-color: #005;
+	--text-shadow: 0px 0px 1px #997;
+	--background-color: rgb(255, 250, 235);
+	--background-color-dark: rgb(250, 240, 220);
+}
+
+.page-content, .mdl-layout-title, .menu-title, .mdl-navigation__link, .page-title, .title-description {
+	color: var(--text-color);
+	font-family: Rachana;
+	text-shadow: var(--text-shadow);
+}
+
+.mdl-button--fab.mdl-button--mini-fab {
+	background: var(--background-color-dark);
+	height: 30px;
+	min-width: 30px;
+	width: 30px;
+}
+
+.material-icons {
+	color: var(--text-color);
+	text-shadow: var(--text-shadow);
+}
+
+body, .mdl-layout--fixed-drawer, .mdl-layout__drawer, .mdl-menu, .mdl-layout__header .mdl-layout__header-row, .mdl-layout-container, .mdl-layout__header .mdl-layout__drawer-button {
+	background-color: var(--background-color)
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+	display: block;
+	flex-shrink: 0;
+	padding: 15px 20px;
+	margin: 0;
+	text-align: center;
+	line-height: 10pt;
+}
+
+.menu-title {
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.mdl-layout--fixed-drawer>.mdl-layout__header .mdl-layout__header-row {
+	padding: 0px 0px 0px 0px;
+}
+
+.mdl-layout-title {
+	margin: auto;
+	font-weight: bold;
+	padding-top: 7px;
+	width: 70vw;
+	text-align: center;
+}
+
+.title-description {
+	font-weight: lighter;
+	font-size: 12pt;
+}
+
+.page-title {
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.page-body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.page-content {
+	margin: auto;
+	text-align: center;
+	overflow: auto;
+	padding: 0 1rem 0 1rem;
+}
+
+.mdl-paging {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 0.3rem;
+	padding-top: 0.3rem;
+	box-shadow: 0px 0px 5px rgb(218, 218, 218);
+}
+
+#spacer-horizontal-pagination-leftright {
+	text-align: center;
+	width: 60vw;
+}
+
+@media only screen and (min-width: 800px) {
+	.page-content {
+		padding: 0 10rem 0 10rem;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	.page-content {
+		padding: 0 20rem 0 20rem;
+	}
+}
