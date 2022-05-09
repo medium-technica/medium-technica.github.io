@@ -76,7 +76,7 @@ function loadFile(titleFile, index, event) {
 	$('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
 	$('.page-title').html(titleFile);
 	$('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
-	history.pushState({}, null, "/aavarthi/?t=" + titleFile);
+	history.pushState({}, null, "/?t=" + titleFile);
 	if (index == 0) {
 		$('.mdl-paging__prev').css("visibility", "hidden");
 	} else {
