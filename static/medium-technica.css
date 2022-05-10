@@ -55,7 +55,8 @@ body, .mdl-layout--fixed-drawer, .mdl-layout__drawer, .mdl-menu, .mdl-layout__he
 
 .title-description {
 	font-weight: lighter;
-	font-size: 12pt;
+	font-size: 8pt;
+	padding-top: .3rem;
 }
 
 .page-title {
