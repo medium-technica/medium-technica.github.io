@@ -25,6 +25,9 @@
 body, .mdl-layout--fixed-drawer, .mdl-layout__drawer, .mdl-menu, .mdl-layout__header .mdl-layout__header-row, .mdl-layout-container, .mdl-layout__header .mdl-layout__drawer-button {
 	background-color: var(--background-color)
 }
+img {
+ width: 95%;
+}
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 	display: block;
