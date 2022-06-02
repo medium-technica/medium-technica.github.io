@@ -88,31 +88,3 @@ function loadFile(titleFile, index, event) {
   $('.mdl-paging__next').css("visibility", "visible");
  }
 }
-
-//https://stackoverflow.com/a/18750001
-
-function encodeStr(rawStr) {
- var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/g, function (i) {
-  return '&#' + i.charCodeAt(0) + ';'
- });
- return encodedStr;
-}
-
-/**
- * Convert a string to HTML entities
- */
-function encodeStr2HTML(rawStr) {
- return rawStr.replace(/./gm, function (s) {
-  // return "&#" + s.charCodeAt(0) + ";";
-  return (s.match(/[a-z0-9\s]+/i)) ? s : "&#" + s.charCodeAt(0) + ";";
- });
-};
-
-/**
-* Create string from HTML entities
-*/
-function decodeHTML2Str(HTMLencodedStr) {
- return (HTMLencodedStr + "").replace(/&#\d+;/gm, function (s) {
-  return String.fromCharCode(s.match(/\d+/gm)[0]);
- });
-};
