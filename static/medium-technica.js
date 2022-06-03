@@ -76,7 +76,7 @@ function loadFile(titleFile, index, event) {
  $('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
  $('.page-title').html(titleFile);
  $('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
- history.pushState({}, null, window.location.pathname + "/?t=" + encodeURIComponent(titleFile));
+ history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile));
  if (index == 0) {
   $('.mdl-paging__prev').css("visibility", "hidden");
  } else {
