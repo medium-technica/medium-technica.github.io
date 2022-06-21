@@ -7,40 +7,11 @@
    viewBox="0 0 116 210"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-   sodipodi:docname="layers_of_existence.svg"
-   inkscape:export-filename="layers_of_existence.svg"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.75989759"
-     inkscape:cx="-109.22524"
-     inkscape:cy="442.16484"
-     inkscape:window-width="1920"
-     inkscape:window-height="1024"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g534" />
   <defs
      id="defs2" />
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1">
     <g
        id="g534"
@@ -86,7 +57,6 @@
          x="52.668041"
          y="39.579784"
          id="text186"><tspan
-           sodipodi:role="line"
            id="tspan184"
            style="stroke-width:0.13285"
            x="52.668041"
@@ -97,7 +67,6 @@
          x="52.693027"
          y="124.91986"
          id="text186-7"><tspan
-           sodipodi:role="line"
            id="tspan184-5"
            style="stroke-width:0.13285"
            x="52.693027"
@@ -108,7 +77,6 @@
          x="52.668037"
          y="149.10239"
          id="text186-7-3"><tspan
-           sodipodi:role="line"
            id="tspan184-5-5"
            style="stroke-width:0.13285"
            x="52.668037"
@@ -119,7 +87,6 @@
          x="52.568073"
          y="175.29428"
          id="text186-7-6-9"><tspan
-           sodipodi:role="line"
            id="tspan184-5-2-1"
            style="stroke-width:0.13285"
            x="52.568073"
@@ -130,7 +97,6 @@
          x="52.718021"
          y="200.46941"
          id="text186-7-6-9-2"><tspan
-           sodipodi:role="line"
            id="tspan184-5-2-1-7"
            style="stroke-width:0.13285"
            x="52.718021"
@@ -141,7 +107,6 @@
          x="52.643047"
          y="225.51459"
          id="text186-7-6-9-0"><tspan
-           sodipodi:role="line"
            id="tspan184-5-2-1-9"
            style="stroke-width:0.13285"
            x="52.643047"
@@ -153,7 +118,6 @@
          y="-99.826355"
          id="text499"
          transform="matrix(-2.1388739,-2.433323e-4,0.00111319,-0.46753562,0,0)"><tspan
-           sodipodi:role="line"
            id="tspan497"
            style="stroke-width:0.140566"
            x="-24.653162"
@@ -165,7 +129,6 @@
          y="-206.90868"
          id="text499-3"
          transform="matrix(-1.9060034,-2.73062e-4,9.9199323e-4,-0.52465789,0,0)"><tspan
-           sodipodi:role="line"
            id="tspan497-6"
            style="stroke-width:0.157703"
            x="-27.714617"
@@ -177,7 +140,6 @@
          y="-351.03976"
          id="text499-3-2"
          transform="matrix(-1.9060034,-2.73062e-4,9.9199323e-4,-0.52465789,0,0)"><tspan
-           sodipodi:role="line"
            id="tspan497-6-61"
            style="stroke-width:0.157703"
            x="-27.789633"
@@ -189,7 +151,6 @@
          y="-399.04269"
          id="text499-3-02"
          transform="matrix(-1.9060034,-2.73062e-4,9.9199323e-4,-0.52465789,0,0)"><tspan
-           sodipodi:role="line"
            id="tspan497-6-3"
            style="stroke-width:0.157703"
            x="-27.814615"
@@ -201,7 +162,6 @@
          y="-179.90933"
          id="text499-3-0"
          transform="matrix(-1.1570235,-4.4982412e-4,6.0218093e-4,-0.86428644,0,0)"><tspan
-           sodipodi:role="line"
            id="tspan497-6-6"
            style="stroke-width:0.299656"
            x="-45.558308"
@@ -213,7 +173,6 @@
          y="-149.52373"
          id="text499-3-0-5"
          transform="matrix(-1.1570235,-4.4982412e-4,6.0218093e-4,-0.86428644,0,0)"><tspan
-           sodipodi:role="line"
            id="tspan497-6-6-3"
            style="stroke-width:0.299656"
            x="-45.542492"
