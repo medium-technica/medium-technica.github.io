@@ -111,6 +111,11 @@ img {
  text-align: center;
 }
 
+#more-button {
+ position: fixed;
+ right:0;
+}
+
 .title-description {
  font-weight: lighter;
  font-size: 8pt;
