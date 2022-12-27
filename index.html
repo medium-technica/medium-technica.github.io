@@ -27,10 +27,14 @@
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Medium Technica<div class="title-description">A Medium for a Technical View of
-            Life</div>
-        </span>
+        <div class="mdl-layout-title">Medium Technica<div class="title-description">A Medium for a Technical View of Life</div>
       </div>
+      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-layout--overlay-drawer-button" id="more-button">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+        <li class="mdl-menu__item"><a href="https://medium-technica.github.io/abraham">About the Writer</a></li>
+      </ul>
     </header>
     <div class="demo-drawer mdl-layout__drawer">
       <header class="demo-drawer-header">
