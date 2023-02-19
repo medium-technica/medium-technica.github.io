@@ -2,104 +2,108 @@
 <html>
 
 <head>
-  <title>Medium Technica</title>
+ <title>Medium Technica</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="shortcut icon" type="image/x-icon" href="static/res/img/yin-yang.png" />-->
-  <link rel="apple-touch-icon" sizes="180x180" href="static/res/img/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="static/res/img/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="static/res/img/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="static/res/img/favicon_io/site.webmanifest">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--<link rel="shortcut icon" type="image/x-icon" href="static/res/img/yin-yang.png" />-->
+ <link rel="apple-touch-icon" sizes="180x180" href="static/res/img/favicon_io/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="static/res/img/favicon_io/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="static/res/img/favicon_io/favicon-16x16.png">
+ <link rel="manifest" href="static/res/img/favicon_io/site.webmanifest">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+ <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-  <link href="static/medium-technica.css" rel="stylesheet" media="all" type="text/css">
-  <script src="static/medium-technica.js"></script>
+ <link href="static/medium-technica.css" rel="stylesheet" media="all" type="text/css">
+ <script src="static/medium-technica.js"></script>
 
 </head>
 
 <body>
-  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-    <header class="demo-header mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <div class="mdl-layout-title">Medium Technica<div class="title-description">A Medium for a Technical View of Life</div>
-      </div>
-      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-layout--overlay-drawer-button" id="more-button">
-        <i class="material-icons">more_vert</i>
-      </button>
-      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-        <li class="mdl-menu__item"><a href="https://medium-technica.github.io/abraham">About the Writer</a></li>
-      </ul>
-    </header>
-    <div class="demo-drawer mdl-layout__drawer">
-      <header class="demo-drawer-header">
-        <div class="menu-title">Articles</div>
-      </header>
-      <nav id="ListMenu" class="demo-navigation mdl-navigation">
-      </nav>
+ <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="demo-header mdl-layout__header">
+   <div class="mdl-layout__header-row">
+    <div class="mdl-layout-title">Medium Technica<div class="title-description">A Medium for a Technical View of Life
+     </div>
     </div>
-    <main class="mdl-layout__content">
-      <div class="page-body">
-        <div class='mdl-paging'>
-          <table>
-            <td>
-              <a href="#top" onclick="loadPrev()" class="mdl-paging__prev">
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                  <span class="mdl-paging__prev">
-                    <i class="material-icons">keyboard_arrow_left</i>
-                  </span>
-                </button>
-              </a>
-            </td>
-            <td id="spacer-horizontal-pagination-leftright"><span class="page-title"></span></td>
-            <td>
-              <a href="#top" onclick="loadNext()" class=" mdl-navigation__link mdl-paging__next">
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-                  <span>
-                    <i class="material-icons">keyboard_arrow_right</i>
-                  </span>
-                </button>
-              </a>
-            </td>
-          </table>
-        </div>
-        <div class="page-content">
-        </div>
-        <div class='mdl-paging'>
-          <a href="#top" onclick="loadPrev()" class=" mdl-navigation__link mdl-paging__prev">
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-              <span class="mdl-paging__prev">
-                <i class="material-icons">keyboard_arrow_left</i>
-              </span>
-            </button>
-          </a>
-          <span id="spacer-horizontal-pagination-leftright"></span>
-          <a href="#top" onclick="loadNext()" class=" mdl-navigation__link mdl-paging__next">
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-              <span>
-                <i class="material-icons">keyboard_arrow_right</i>
-              </span>
-            </button>
-          </a>
-        </div>
-      </div>
-
-    </main>
+    <button
+     class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-layout--overlay-drawer-button"
+     id="more-button">
+     <i class="material-icons">more_vert</i>
+    </button>
+    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+     <li class="mdl-menu__item" onclick="location.href='https://medium-technica.github.io/abraham';"
+      value="About the Writer">About the Writer</li>
+    </ul>
+  </header>
+  <div class="demo-drawer mdl-layout__drawer">
+   <header class="demo-drawer-header">
+    <div class="menu-title">Articles</div>
+   </header>
+   <nav id="ListMenu" class="demo-navigation mdl-navigation">
+   </nav>
   </div>
+  <main class="mdl-layout__content">
+   <div class="page-body">
+    <div class='mdl-paging'>
+     <table>
+      <td>
+       <a href="#top" onclick="loadPrev()" class="mdl-paging__prev">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+         <span class="mdl-paging__prev">
+          <i class="material-icons">keyboard_arrow_left</i>
+         </span>
+        </button>
+       </a>
+      </td>
+      <td id="spacer-horizontal-pagination-leftright"><span class="page-title"></span></td>
+      <td>
+       <a href="#top" onclick="loadNext()" class=" mdl-navigation__link mdl-paging__next">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+         <span>
+          <i class="material-icons">keyboard_arrow_right</i>
+         </span>
+        </button>
+       </a>
+      </td>
+     </table>
+    </div>
+    <div class="page-content">
+    </div>
+    <div class='mdl-paging'>
+     <a href="#top" onclick="loadPrev()" class=" mdl-navigation__link mdl-paging__prev">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+       <span class="mdl-paging__prev">
+        <i class="material-icons">keyboard_arrow_left</i>
+       </span>
+      </button>
+     </a>
+     <span id="spacer-horizontal-pagination-leftright"></span>
+     <a href="#top" onclick="loadNext()" class=" mdl-navigation__link mdl-paging__next">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+       <span>
+        <i class="material-icons">keyboard_arrow_right</i>
+       </span>
+      </button>
+     </a>
+    </div>
+   </div>
+
+  </main>
+ </div>
 </body>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPG5BRLC20"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+ window.dataLayer = window.dataLayer || [];
+ function gtag() { dataLayer.push(arguments); }
+ gtag('js', new Date());
 
-  gtag('config', 'G-YPG5BRLC20');
+ gtag('config', 'G-YPG5BRLC20');
 </script>
 
 </html>
