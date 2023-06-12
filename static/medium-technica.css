@@ -25,8 +25,9 @@
 :root {
  --text-color: #005;
  --text-shadow: 0px 0px 1px #997;
- --background-color: rgb(253, 249, 236);
- --background-color-dark: rgb(235, 220, 190);
+ --background-color: rgb(255, 250, 235);
+ --background-color-dark: rgb(250, 240, 220);
+ line-height: normal;
 }
 
 .page-content,
@@ -35,7 +36,6 @@
 .mdl-navigation__link,
 .page-title,
 .title-description {
- font-family: 'Roboto', sans-serif;
  color: var(--text-color);
  text-shadow: var(--text-shadow);
 }
@@ -45,24 +45,6 @@
  height: 30px;
  min-width: 30px;
  width: 30px;
-}
-
-figure {
- box-shadow: 0px 0px 5px rgb(177, 170, 137);
- /*border-radius: 10px;*/
- margin: auto;
- width: fit-content;
-}
-
-.two-cols figure {
- margin: 0 1rem;
- width: 40%;
- display: inline-block;
-}
-
-figcaption {
- font-size: smaller;
- font-style: italic;
 }
 
 .material-icons {
@@ -78,10 +60,6 @@ body,
 .mdl-layout-container,
 .mdl-layout__header .mdl-layout__drawer-button {
  background-color: var(--background-color)
-}
-
-img {
- width: 95%;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
@@ -113,18 +91,25 @@ img {
 
 #more-button {
  position: fixed;
- right:0;
+ right: 0;
 }
 
 .title-description {
  font-weight: lighter;
  font-size: 8pt;
- padding-top: .3rem;
 }
 
 .page-title {
  font-weight: bold;
  font-size: 1.3em;
+}
+
+.page-content table,
+.page-content th,
+.page-content td {
+ border: 1px solid black;
+ border-collapse: collapse;
+  padding: 7px 7px 0px 7px;
 }
 
 .page-body {
@@ -140,6 +125,33 @@ img {
  padding: 0 1rem 0 1rem;
 }
 
+img {
+ max-width: 80%;
+}
+
+figure {
+ box-shadow: 0px 0px 5px rgb(177, 170, 137);
+ /*border-radius: 10px;*/
+ margin: auto;
+ width: fit-content;
+}
+
+.two-cols figure {
+ margin: 0 1rem;
+ width: 40%;
+ display: inline-block;
+}
+
+figcaption {
+ font-size: smaller;
+ font-style: italic;
+}
+
+.two-cols figcaption {
+ font-size: xx-small;
+ font-style: italic;
+}
+
 .mdl-paging {
  display: flex;
  justify-content: center;
@@ -148,9 +160,44 @@ img {
  box-shadow: 0px 0px 5px rgb(218, 218, 218);
 }
 
+.justified {
+ text-align: justify;
+}
+
 #spacer-horizontal-pagination-leftright {
  text-align: center;
  width: 60vw;
+}
+
+/* Tooltip container */
+.tooltip {
+ position: relative;
+ display: inline-block;
+ text-decoration: underline;
+ text-decoration-style: dotted;
+ /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text https://www.w3schools.com/css/css_tooltip.asp*/
+.tooltip .tooltiptext {
+ visibility: hidden;
+ width: 120px;
+ background-color: rgb(255, 253, 249);
+ color: rgb(1, 0, 80);
+ text-align: center;
+ padding: 5px 0;
+ border-radius: 6px;
+ line-height: normal;
+
+ /* Position the tooltip text - see examples below! */
+ position: absolute;
+ z-index: 1;
+ font-size: x-small;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+ visibility: visible;
 }
 
 @media only screen and (min-width: 800px) {

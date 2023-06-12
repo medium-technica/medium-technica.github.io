@@ -3,13 +3,13 @@ $(fnInit())
 var ListFiles = [];
 var ListTitleFiles = [];
 var Articles;
+var Description;
 
 function fnInit() {
  console.log("init");
- loadFilesList();
+ fnLoadData();
 }
-
-function loadFilesList() {
+function fnLoadData() {
  fetch("static/res/doc/text.json")
   .then(response => response.json())
   .then(data => {
@@ -22,8 +22,8 @@ function loadFilesList() {
     indexArray++;
     ListFiles.push(value);
    })
-   titleFileURL = decodeURIComponent(getURLParam('t'));
-   //console.log("..." + decodeURIComponent(titleFileURL));
+   titleFileURL = decodeURIComponent(getURLParam('t')).replace(/_/g, " ");
+   //console.log(titleFileURL, Articles[titleFileURL]);
    indexFile = Object.keys(Articles).indexOf(titleFileURL);
    console.log("index from Name:" + indexFile);
    if (indexFile >= 0 && ListFiles.length > 0) {
@@ -32,12 +32,14 @@ function loadFilesList() {
     return
    }
    loadFile(ListTitleFiles[0], 0);
+   Description = document.querySelector('meta[property="og:description"]').getAttribute("content");
   });
 }
 
 function loadPrev() {
  console.log("Prev");
- titleFileURL = decodeURIComponent(getURLParam('t'));
+ //titleFileURL = decodeURIComponent(getURLParam('t'));
+ titleFileURL = decodeURIComponent(getURLParam('t')).replace(/_/g, " ");
  //console.log(Articles[titleFileURL]);
  indexFile = Object.keys(Articles).indexOf(titleFileURL);
  if (indexFile > 0)
@@ -50,7 +52,8 @@ function loadPrev() {
 
 function loadNext() {
  console.log("Next");
- titleFileURL = decodeURIComponent(getURLParam('t'));
+ //titleFileURL = decodeURIComponent(getURLParam('t'));
+ titleFileURL = decodeURIComponent(getURLParam('t')).replace(/_/g, " ");
  //console.log(Articles[titleFileURL]);
  indexFile = Object.keys(Articles).indexOf(titleFileURL);
  if (indexFile < ListFiles.length - 1)
@@ -76,10 +79,17 @@ function loadFile(titleFile, index, event) {
  $('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
  $('.page-title').html(titleFile);
  $('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
- history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile));
+ document.querySelector('meta[property="og:title"]').setAttribute("content", titleFile);
+ console.log(document.querySelector('meta[property="og:title"]').getAttribute("content"));
+ history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile).replace(/%20/g, "_"));
+ console.log(decodeURIComponent((window.location.href).replace(/%20/g, "_")));
+ document.querySelector('meta[property="og:url"]').setAttribute("content", decodeURIComponent((window.location.href).replace(/%20/g, "_")));
+ document.title = titleFile;
  if (index == 0) {
   $('.mdl-paging__prev').css("visibility", "hidden");
+  document.querySelector('meta[property="og:description"]').setAttribute("content", Description);
  } else {
+  document.querySelector('meta[property="og:description"]').setAttribute("content", (Articles[titleFile]).substring(0, 50) + " ...");
   $('.mdl-paging__prev').css("visibility", "visible");
  }
  if (index == ListFiles.length - 1) {
