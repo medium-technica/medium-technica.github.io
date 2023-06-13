@@ -24,6 +24,8 @@ function fnLoadInit() {
    document.querySelector("#menu-item-right").innerHTML = data["title-menu-right"];
    document.querySelector("#menu-item-left").innerHTML = data["title-menu-left"];
    document.querySelector("body").setAttribute("style", "font-family:" + data["body-style-font-family"])
+   document.querySelector(".mdl-layout-title").setAttribute("style", "font-family:" + data["body-style-font-family"]);
+   document.querySelector(".title-description").setAttribute("style", "font-family:" + data["body-style-font-family"]);
    document.querySelector('meta[property="og:title"]').setAttribute("content", Title);
    document.querySelector('meta[property="og:description"]').setAttribute("content", Description);
    fnLoadData();
