@@ -102,8 +102,8 @@ function loadFile(titleFile, index, event) {
 	$('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
 	$('.page-title').html(titleFile);
 	$('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
-	var body = document.body.textContent;
-	if (body.match(/(?:\$|\\\(|\\\[|\\begin\{.*?})/)) {
+	var bodyWithMath = document.body.textContent;
+	if (bodyWithMath.match(/(?:\$|\\\(|\\\[|\\begin\{.*?})/)) {
 		if (!window.MathJax) {
 			window.MathJax = {
 				tex: {
@@ -114,6 +114,7 @@ function loadFile(titleFile, index, event) {
 		var script = document.createElement('script');
 		script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
 		document.head.appendChild(script);
+		console.log("yes");
 	}
 	MathJax.typeset();
 	document.querySelector('meta[property="og:title"]').setAttribute("content", titleFile);
