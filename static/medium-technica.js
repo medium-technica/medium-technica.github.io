@@ -115,6 +115,7 @@ function loadFile(titleFile, index, event) {
 		script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
 		document.head.appendChild(script);
 	}
+	MathJax.typeset();
 	document.querySelector('meta[property="og:title"]').setAttribute("content", titleFile);
 	console.log(document.querySelector('meta[property="og:title"]').getAttribute("content"));
 	history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile).replace(/%20/g, "_"));
