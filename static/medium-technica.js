@@ -97,28 +97,30 @@ function loadFile(titleFile, index, event) {
 	if (event) {
 		updateevent.preventDefault();
 	}
-	//console.log(titleFile, index, ListFiles.length);
-	$('.mdl-layout__drawer').attr("class", "mdl-layout__drawer");
-	$('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
-	$('.page-title').html(titleFile);
-	$('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
-	MathJax.typeset();
-	document.querySelector('meta[property="og:title"]').setAttribute("content", titleFile);
-	console.log(document.querySelector('meta[property="og:title"]').getAttribute("content"));
-	history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile).replace(/%20/g, "_"));
-	console.log(decodeURIComponent((window.location.href).replace(/%20/g, "_")));
-	document.querySelector('meta[property="og:url"]').setAttribute("content", decodeURIComponent((window.location.href).replace(/%20/g, "_")));
-	document.title = titleFile;
-	if (index == 0) {
-		$('.mdl-paging__prev').css("visibility", "hidden");
-		document.querySelector('meta[property="og:description"]').setAttribute("content", Description);
-	} else {
-		document.querySelector('meta[property="og:description"]').setAttribute("content", (Articles[titleFile]).substring(0, 50) + " ...");
-		$('.mdl-paging__prev').css("visibility", "visible");
-	}
-	if (index == ListFiles.length - 1) {
-		$('.mdl-paging__next').css("visibility", "hidden");
-	} else {
-		$('.mdl-paging__next').css("visibility", "visible");
-	}
+	import("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML").then(module => {
+		//console.log(titleFile, index, ListFiles.length);
+		$('.mdl-layout__drawer').attr("class", "mdl-layout__drawer");
+		$('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
+		$('.page-title').html(titleFile);
+		$('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
+		module.MathJax.typeset();
+		document.querySelector('meta[property="og:title"]').setAttribute("content", titleFile);
+		console.log(document.querySelector('meta[property="og:title"]').getAttribute("content"));
+		history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile).replace(/%20/g, "_"));
+		console.log(decodeURIComponent((window.location.href).replace(/%20/g, "_")));
+		document.querySelector('meta[property="og:url"]').setAttribute("content", decodeURIComponent((window.location.href).replace(/%20/g, "_")));
+		document.title = titleFile;
+		if (index == 0) {
+			$('.mdl-paging__prev').css("visibility", "hidden");
+			document.querySelector('meta[property="og:description"]').setAttribute("content", Description);
+		} else {
+			document.querySelector('meta[property="og:description"]').setAttribute("content", (Articles[titleFile]).substring(0, 50) + " ...");
+			$('.mdl-paging__prev').css("visibility", "visible");
+		}
+		if (index == ListFiles.length - 1) {
+			$('.mdl-paging__next').css("visibility", "hidden");
+		} else {
+			$('.mdl-paging__next').css("visibility", "visible");
+		}
+	});
 }
