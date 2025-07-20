@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 /* Rachana */
 
@@ -38,6 +39,11 @@
 .title-description {
  color: var(--text-color);
  text-shadow: var(--text-shadow);
+}
+
+.page-content {
+ font-family: "EB Garamond", serif;
+ font-size: medium;
 }
 
 .mdl-button--fab.mdl-button--mini-fab {
