@@ -5,11 +5,15 @@ var ListFiles = [];
 var ListTitleFiles = [];
 var Articles;
 var Description;
+var links;
 
 function fnInit() {
 	console.log("init");
 	fnLoadInit();
 	//fnLoadData();
+}
+
+function fnLoadLinks() {
 }
 
 function fnLoadInit() {
@@ -32,7 +36,11 @@ function fnLoadInit() {
 			document.querySelector(".title-description").setAttribute("style", "font-family:" + data["body-style-font-family"]);
 			document.querySelector('meta[property="og:title"]').setAttribute("content", Title);
 			document.querySelector('meta[property="og:description"]').setAttribute("content", Description);
-			fnLoadData();
+			fetch("https://medium-technica.github.io/abraham/links.json").then(response => response.json()).then(data => {
+				links = data;
+				//console.log(links);
+				fnLoadData();
+			});
 		});
 }
 
@@ -124,4 +132,23 @@ function loadFile(titleFile, index, event) {
 	} else {
 		$('.mdl-paging__next').css("visibility", "visible");
 	}
+}
+
+function fnReplaceKeywords2Links(textWithKeywords) {
+	const strS = "<l>";
+	const strE = "</l>";
+	let strLinkKeyword = textWithKeywords;
+	let iS = textWithKeywords.indexOf(strS);
+	let iE = textWithKeywords.indexOf(strE);
+	let count = 0;
+	do {
+		let keyWord = strLinkKeyword.substring(iS + strS.length, iE);
+		strLinkKeyword = strLinkKeyword.replace(strS + keyWord + strE, fnStr2LinkHTML(keyWord));
+		//console.log(iS, keyWord, iE);
+		//console.log("Substring:" + strLinkKeyword);
+		count++;
+		iS = strLinkKeyword.indexOf(strS);
+		iE = strLinkKeyword.indexOf(strE);
+	} while (iE != -1 && iS != -1);
+	return strLinkKeyword;
 }
