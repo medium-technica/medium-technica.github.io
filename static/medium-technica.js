@@ -113,7 +113,7 @@ function loadFile(titleFile, index, event) {
 	$('.mdl-layout__drawer').attr("class", "mdl-layout__drawer");
 	$('.mdl-layout__obfuscator').attr("class", "mdl-layout__obfuscator");
 	$('.page-title').html(titleFile);
-	$('.page-content').html(`<i id='top'></i><br>` + Articles[titleFile] + `<br><br>`);
+	$('.page-content').html(`<i id='top'></i><br>` + fnReplaceKeywords2Links(Articles[titleFile]) + `<br><br>`);
 	document.querySelector('meta[property="og:title"]').setAttribute("content", titleFile);
 	console.log(document.querySelector('meta[property="og:title"]').getAttribute("content"));
 	history.pushState({}, null, window.location.pathname + "?t=" + encodeURIComponent(titleFile).replace(/%20/g, "_"));
@@ -151,4 +151,11 @@ function fnReplaceKeywords2Links(textWithKeywords) {
 		iE = strLinkKeyword.indexOf(strE);
 	} while (iE != -1 && iS != -1);
 	return strLinkKeyword;
+}
+
+function fnStr2LinkHTML(str) {
+	if (links[str] != null) {
+		return `<a href = '` + links[str] + `' >` + str + `</a>`;
+	}
+	return str;
 }
