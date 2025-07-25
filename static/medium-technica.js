@@ -155,8 +155,8 @@ function fnReplaceKeywords2Links(textWithKeywords) {
 
 function fnStr2LinkHTML(str) {
 	if (links[str] != null) {
+		console.log(str, links[str]);
 		return `<a href = '` + links[str] + `' >` + str + `</a>`;
 	}
-	console.log(str, links[str]);
 	return str;
 }
