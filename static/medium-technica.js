@@ -157,5 +157,6 @@ function fnStr2LinkHTML(str) {
 	if (links[str] != null) {
 		return `<a href = '` + links[str] + `' >` + str + `</a>`;
 	}
+	console.log(str, links[str]);
 	return str;
 }
