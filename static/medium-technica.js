@@ -36,7 +36,7 @@ function fnLoadInit() {
 			document.querySelector(".title-description").setAttribute("style", "font-family:" + data["body-style-font-family"]);
 			document.querySelector('meta[property="og:title"]').setAttribute("content", Title);
 			document.querySelector('meta[property="og:description"]').setAttribute("content", Description);
-			fetch("static/links.json").then(response => response.json()).then(data => {
+			fetch("https://medium-technica.github.io/static/links.json").then(response => response.json()).then(data => {
 				links = data;
 				//console.log(links);
 				fnLoadData();
