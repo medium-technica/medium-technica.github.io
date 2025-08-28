@@ -154,9 +154,21 @@ function fnReplaceKeywords2Links(textWithKeywords) {
 }
 
 function fnStr2LinkHTML(str) {
+	let strHTML = "";
+	if (isMalayalam(str)) {
+		strHTML = "id = text-malayalam";
+	}
 	if (links[str] != null) {
 		console.log(str, links[str]);
-		return `<a href = '` + links[str] + `' >` + str + `</a>`;
+		return `<a ${strHTML} href = '` + links[str] + `' >` + str + `</a>`;
 	}
 	return str;
+}
+
+function isMalayalam(str) {
+	// Regex to match any character in the Malayalam Unicode block (U+0D00-U+0D7F)
+	const malayalamRegex = /[\u0D00-\u0D7F]/;
+
+	// The .test() method returns true if the regex finds a match in the string
+	return malayalamRegex.test(str);
 }
